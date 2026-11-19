@@ -12,12 +12,14 @@ El código calcula y compara los pesos óptimos de un **Portafolio de Mínima Va
 Se utiliza un universo de cinco activos contrastantes (JNJ, AAPL, MSFT, GLD y BTC-USD) para someter a estrés ambos modelos ante problemas de hiperconcentración y multicolinealidad.
 
 ## 🛠️ Requisitos y Librerías
-Para ejecutar el código, necesitas tener instalado `R` y los siguientes paquetes:
+Para ejecutar el código y generar las visualizaciones, necesitas tener instalado `R` y los siguientes paquetes:
 
 - `quantmod`: Para la descarga de datos históricos financieros (Yahoo Finance).
 - `tidyverse` (`dplyr`, `purrr`): Para la manipulación de datos y cálculo de retornos.
 - `MCMCpack`: Para el muestreo de la distribución Inversa-Wishart (`riwish`).
+- `ggplot2`: Para la creación de gráficos avanzados y comparativas visuales de los pesos del portafolio.
+- `ggcorrplot`: Para la visualización térmica (*heatmap*) de las matrices de covarianza y correlación.
 
 Puedes instalar las dependencias con el siguiente comando en R:
 ```R
-install.packages(c("quantmod", "tidyverse", "MCMCpack"))
+install.packages(c("quantmod", "tidyverse", "MCMCpack", "ggplot2", "ggcorrplot"))
